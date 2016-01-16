@@ -1,0 +1,28 @@
+<ion-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <form name="accountForm" ng-submit="submit()">
+      <label class="item item-input item-stacked-label" ng-if="createAccount">
+        <span class="input-label">Name</span> {{name}}
+        <input type="text" placeholder="Bill" ng-model="form.name" ng-required="createAccount">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Email</span>
+        <input placeholder="bill@gmail.com" type="email" ng-model="form.email" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Password</span>
+        <input placeholder="password"  type="password" ng-model="form.password" required>
+      </label>
+      <label class="item">
+        <span ng-if="error" class="errorMessage">{{error}}</span>
+        <button class="button button-block button-positive" type="submit">{{ createAccount ? 'Create' : 'Log in' }}</button>
+      </label>
+    </form>
+      <a ng-click="toggleState()">{{ !createAccount ? 'Create an account' : 'Log in' }}</a>
+    </div>
+  </ion-content>
+</ion-view>

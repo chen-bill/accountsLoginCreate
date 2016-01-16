@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+.errorMessage{
+	color:red;
+	font-style: italic;
+}
+#buttonContainer{
+	position: fixed;
+	display: block;
+	width: 100%;
+	bottom: 0;
+}
+
+#createRoomButton{
+	margin: 0;
+}
+
+#joinRoomButton{
+	margin: 0;
+}
